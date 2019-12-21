@@ -1,0 +1,55 @@
+html {
+    font-family: "Abel", sans-serif;
+    background-color: gainsboro;
+}
+
+body{
+    width: 600px;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    padding: 0 20px 20px 20px 20px;
+    border: 2px solid black;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px dimgray;
+}
+
+h1{
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 3;
+    letter-spacing: 1px;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+img{
+     border-width: 1px;
+     border-color: black;
+     border-style: solid;
+ }
+
+ #profile-pic{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     height: auto;
+     width: 500px;
+ }
+
+ #change-user-btn{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
