@@ -46,7 +46,7 @@ function loadWaifuData(waifuName){
             waifuNP.appendChild(document.createTextNode("Bellerophon"));
             break;
         case "CIRCE":
-            waifuImg.setAttribute("src", "images/bestbirb.jpg");
+            waifuImg.setAttribute("src", "images/bestbirb.png");
             waifuImg.setAttribute("alt", "Best Birb");
 
             waifuIntro.appendChild(document.createTextNode("Circe is best birb!"));
