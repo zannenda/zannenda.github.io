@@ -5,9 +5,9 @@ mainBody.onload = function(){
 
 
 // dealing with the main image
-let myImage = document.querySelector('img');
-myImage.onclick = function() {
-    let mySrc = myImage.getAttribute('src');
+let waifuImg = document.getElementById('waifu-pic');
+waifuImg.onclick = function() {
+    let mySrc = waifuImg.getAttribute('src');
     
     let myIntro = document.getElementById('intro');
     let myIntroChildNodes = myIntro.childNodes;
@@ -16,15 +16,15 @@ myImage.onclick = function() {
     }
 
     if(mySrc === 'images/bestbirb.jpg'){
-        myImage.setAttribute('src', 'images/bestsnek.jpg');
-        myImage.setAttribute('alt', 'Best Snake');
+        waifuImg.setAttribute('src', 'images/bestsnek.jpg');
+        waifuImg.setAttribute('alt', 'Best Snake');
 
         myIntro.appendChild(document.createTextNode('Medusa is best snake!'));
     }
 
     if(mySrc === 'images/bestsnek.jpg'){
-        myImage.setAttribute('src', 'images/bestbirb.jpg');
-        myImage.setAttribute('alt', 'Best Birb');
+        waifuImg.setAttribute('src', 'images/bestbirb.jpg');
+        waifuImg.setAttribute('alt', 'Best Birb');
 
         myIntro.appendChild(document.createTextNode('Circe is best birb!'));
     }
