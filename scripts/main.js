@@ -1,4 +1,4 @@
-let mainBody = document.querySelector('body');
+let mainBody = document.querySelector("body");
 mainBody.onload = function(){
     setUserName();
 
@@ -7,7 +7,7 @@ mainBody.onload = function(){
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 // dealing with the main image
-let waifuImg = document.getElementById('waifu-pic');
+let waifuImg = document.getElementById("waifu-pic");
 waifuImg.onclick = function() {
     switch(sessionStorage.getItem("current-waifu")){
         case "CIRCE":
@@ -21,10 +21,10 @@ waifuImg.onclick = function() {
 
 
 function loadWaifuData(waifuName){
-    let waifuIntro = document.getElementById('waifu-intro');
+    let waifuIntro = document.getElementById("waifu-intro");
     removeAllChildNodes(waifuIntro);
 
-    let waifuTraitList = document.getElementById('waifu-traits');
+    let waifuTraitList = document.getElementById("waifu-traits");
     removeAllChildNodes(waifuTraitList);
 
     let waifuClass = document.createElement("li");
@@ -35,25 +35,25 @@ function loadWaifuData(waifuName){
     waifuNP.appendChild(document.createTextNode("Noble Phantasm: "));
 
     switch(waifuName){
-        case 'MEDUSA':
-            waifuImg.setAttribute('src', 'images/bestsnek.jpg');
-            waifuImg.setAttribute('alt', 'Best Snake');
+        case "MEDUSA":
+            waifuImg.setAttribute("src", "images/bestsnek.jpg");
+            waifuImg.setAttribute("alt", "Best Snake");
 
-            waifuIntro.appendChild(document.createTextNode('Medusa is best snake!'));
+            waifuIntro.appendChild(document.createTextNode("Medusa is best snake!"));
 
-            waifuClass.appendChild(document.createTextNode('Rider'));
-            waifuAlignment.appendChild(document.createTextNode('Chaotic Good'));
-            waifuNP.appendChild(document.createTextNode('Bellerophon'));
+            waifuClass.appendChild(document.createTextNode("Rider"));
+            waifuAlignment.appendChild(document.createTextNode("Chaotic Good"));
+            waifuNP.appendChild(document.createTextNode("Bellerophon"));
             break;
-        case 'CIRCE':
-            waifuImg.setAttribute('src', 'images/bestbirb.jpg');
-            waifuImg.setAttribute('alt', 'Best Birb');
+        case "CIRCE":
+            waifuImg.setAttribute("src", "images/bestbirb.jpg");
+            waifuImg.setAttribute("alt", "Best Birb");
 
-            waifuIntro.appendChild(document.createTextNode('Circe is best birb!'));
+            waifuIntro.appendChild(document.createTextNode("Circe is best birb!"));
 
-            waifuClass.appendChild(document.createTextNode('Caster'));
-            waifuAlignment.appendChild(document.createTextNode('Chaotic Balanced'));
-            waifuNP.appendChild(document.createTextNode('Metabole Piglets'));
+            waifuClass.appendChild(document.createTextNode("Caster"));
+            waifuAlignment.appendChild(document.createTextNode("Chaotic Balanced"));
+            waifuNP.appendChild(document.createTextNode("Metabole Piglets"));
             break;
     }
 
@@ -69,25 +69,25 @@ function loadWaifuData(waifuName){
 
 // --------------------------------------------------------------------------------------------------
 // change user
-let changeUserBtn = document.getElementById('change-user-btn');
+let changeUserBtn = document.getElementById("change-user-btn");
 changeUserBtn.onclick = function() {
     setUserName();
 }
 
 function setUserName(){
-    let myName = prompt('Please enter your name.');
+    let myName = prompt("Please enter your name.");
 
-    if(!myName || myName === null || myName === ''){
+    if(!myName || myName === null || myName === ""){
         setUserName();
     } else{
-        let welcomeMsg =  document.getElementById('welcome-msg');
+        let welcomeMsg =  document.getElementById("welcome-msg");
         removeAllChildNodes(welcomeMsg); 
 
-        localStorage.setItem('name', myName);
+        localStorage.setItem("name", myName);
 
         let japLangSection = document.createElement("span");
         japLangSection.setAttribute("lang", "ja");
-        japLangSection.appendChild(document.createTextNode('喜べ' + myName + '。君の願いをようやく叶う。'));
+        japLangSection.appendChild(document.createTextNode("喜べ" + myName + "。君の願いをようやく叶う。"));
 
         welcomeMsg.appendChild(japLangSection);
     }
