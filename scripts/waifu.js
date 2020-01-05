@@ -5,61 +5,62 @@ waifuBody.onload = function(){
 
 let waifuNameHeader = document.getElementById("waifu-name");
 let waifuImg = document.getElementById("waifu-pic");
+let waifuOrigImgLink = document.getElementById("waifu-original-pic-link");
 let waifuIntro = document.getElementById("waifu-intro");
-let waifuTraitList = document.getElementById("waifu-traits");
+
+let waifuClass = document.getElementById("waifu-class");
+let waifuAlignment = document.getElementById("waifu-alignment");
+let waifuNP = document.getElementById("waifu-np");
+
+let waifuYoutube = document.getElementById("waifu-youtube");
 
 function loadWaifuData(){
     removeAllChildNodes(waifuIntro);
-    removeAllChildNodes(waifuTraitList);
 
     let waifuName = sessionStorage.getItem("current-waifu");
     waifuNameHeader.innerText = waifuName;
 
-    let waifuClass = document.createElement("li");
-    waifuClass.appendChild(document.createTextNode("Class: "));
-    let waifuAlignment = document.createElement("li");
-    waifuAlignment.appendChild(document.createTextNode("Alignment: "));
-    let waifuNP = document.createElement("li");
-    waifuNP.appendChild(document.createTextNode("Noble Phantasm: "));
-
     switch(waifuName){
         case "MEDUSA":
-            waifuImg.setAttribute("srcset", "images/best-snek.png 1271w, images/best-snek-480px.png 480w");
-            waifuImg.setAttribute("src", "images/best-snek.png");
+            waifuImg.setAttribute("src", "images/best-snek-480px.png");
             waifuImg.setAttribute("alt", "Best Snake");
+            waifuOrigImgLink.setAttribute("href", "images/best-snek.png");
 
             waifuIntro.appendChild(document.createTextNode("Medusa is best snake!"));
 
             waifuClass.appendChild(document.createTextNode("Rider"));
             waifuAlignment.appendChild(document.createTextNode("Chaotic Good"));
             waifuNP.appendChild(document.createTextNode("Bellerophon"));
+
+            waifuYoutube.setAttribute("src", "https://www.youtube-nocookie.com/embed/WIvkVs0Z0xY");
             break;
         case "GRAY":
-            waifuImg.setAttribute("srcset", "images/best-girl.png 1001w, images/best-girl-480px.png 480w");
-            waifuImg.setAttribute("src", "images/best-girl-480px.jpg");
+            waifuImg.setAttribute("src", "images/best-girl-480px.png");
             waifuImg.setAttribute("alt", "Best Girl");
+            waifuOrigImgLink.setAttribute("href", "images/best-girl.png");
 
             waifuIntro.appendChild(document.createTextNode("Gray is best girl!"));
 
             waifuClass.appendChild(document.createTextNode("Assassin"));
             waifuAlignment.appendChild(document.createTextNode("Lawful Good"));
             waifuNP.appendChild(document.createTextNode("Rhongomyniad"));
+
+            waifuYoutube.setAttribute("src", "https://www.youtube-nocookie.com/embed/ZG34meoeLlc");
             break;
         case "CIRCE":
-            waifuImg.setAttribute("src", "images/best-birb.png");
+            waifuImg.setAttribute("src", "images/best-birb-480px.png");
             waifuImg.setAttribute("alt", "Best Birb");
+            waifuOrigImgLink("href", "images/best-birb.png");
 
             waifuIntro.appendChild(document.createTextNode("Circe is best birb!"));
 
             waifuClass.appendChild(document.createTextNode("Caster"));
             waifuAlignment.appendChild(document.createTextNode("Chaotic Balanced"));
             waifuNP.appendChild(document.createTextNode("Metabole Piglets"));
+
+            waifuYoutube.setAttribute("src", "https://www.youtube-nocookie.com/embed/T07dr0Ay1wo");
             break;
     }
-
-    waifuTraitList.appendChild(waifuClass);
-    waifuTraitList.appendChild(waifuAlignment);
-    waifuTraitList.appendChild(waifuNP);
 }
 
 function removeAllChildNodes (parentNode){
