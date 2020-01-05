@@ -24,7 +24,8 @@ function loadWaifuData(){
 
     switch(waifuName){
         case "MEDUSA":
-            waifuImg.setAttribute("src", "images/best-snek.jpg");
+            waifuImg.setAttribute("srcset", "images/best-snek.png 1271w, images/best-snek-480px.png 480w");
+            waifuImg.setAttribute("src", "images/best-snek.png");
             waifuImg.setAttribute("alt", "Best Snake");
 
             waifuIntro.appendChild(document.createTextNode("Medusa is best snake!"));
@@ -34,7 +35,8 @@ function loadWaifuData(){
             waifuNP.appendChild(document.createTextNode("Bellerophon"));
             break;
         case "GRAY":
-            waifuImg.setAttribute("src", "images/best-girl.jpg");
+            waifuImg.setAttribute("srcset", "images/best-girl.png 1001w, images/best-girl-480px.png 480w");
+            waifuImg.setAttribute("src", "images/best-girl-480px.jpg");
             waifuImg.setAttribute("alt", "Best Girl");
 
             waifuIntro.appendChild(document.createTextNode("Gray is best girl!"));
