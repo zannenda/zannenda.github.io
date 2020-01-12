@@ -50,7 +50,7 @@ function loadWaifuData(){
         case "CIRCE":
             waifuImg.setAttribute("src", "images/best-birb-480px.png");
             waifuImg.setAttribute("alt", "Best Birb");
-            waifuOrigImgLink("href", "images/best-birb.png");
+            waifuOrigImgLink.setAttribute("href", "images/best-birb.png");
 
             waifuIntro.appendChild(document.createTextNode("Circe is best birb!"));
 

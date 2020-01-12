@@ -1,3 +1,6 @@
+
+//------------------------------------------------------------------------------------------------------------
+
 let medusaLink = document.getElementById("medusa");
 medusaLink.onclick = function(){
     sessionStorage.setItem("current-waifu", "MEDUSA");
@@ -10,8 +13,6 @@ let circeLink = document.getElementById("circe");
 circeLink.onclick = function(){
     sessionStorage.setItem("current-waifu", "CIRCE");
 }
-
-
 
 
 // --------------------------------------------------------------------------------------------------
